@@ -1,5 +1,5 @@
 //
-//  AuthButton.swift
+//  CustomButton.swift
 //  ToDoList
 //
 //  Created by Caner Karabulut on 28.05.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AuthButton: View {
+struct CustomButton: View {
     
     let title: String
     let background: Color
@@ -29,7 +29,7 @@ struct AuthButton: View {
 }
 
 #Preview {
-    AuthButton(title: "Title", background: .green) {
+    CustomButton(title: "Title", background: .green) {
         
     }
 }

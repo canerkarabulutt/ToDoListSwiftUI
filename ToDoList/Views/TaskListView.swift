@@ -8,11 +8,32 @@
 import SwiftUI
 
 struct TaskListView: View {
+    
+    @StateObject var viewModel = TaskListViewModel()
+    private let userId: String
+    
+    init(userId: String) {
+        self.userId = userId
+    }
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                
+            }
+            .navigationTitle("To Do List")
+            .toolbar {
+                Button {
+                    
+                } label: {
+                    Image(systemName: "plus")
+                        .foregroundStyle(.green)
+                }
+            }
+        }
     }
 }
 
 #Preview {
-    TaskListView()
+    TaskListView(userId: "")
 }

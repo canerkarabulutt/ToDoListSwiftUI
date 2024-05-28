@@ -31,7 +31,8 @@
 		2BF2F4E52C0491D400574CED /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E42C0491D400574CED /* RegisterViewModel.swift */; };
 		2BF2F4E72C0491E300574CED /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */; };
 		2BF2F4E92C04991F00574CED /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E82C04991F00574CED /* HeaderView.swift */; };
-		2BF2F4ED2C05E0F000574CED /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4EC2C05E0F000574CED /* AuthButton.swift */; };
+		2BF2F4ED2C05E0F000574CED /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4EC2C05E0F000574CED /* CustomButton.swift */; };
+		2BF2F4EF2C05EE3700574CED /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4EE2C05EE3700574CED /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,7 +58,8 @@
 		2BF2F4E42C0491D400574CED /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		2BF2F4E82C04991F00574CED /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		2BF2F4EC2C05E0F000574CED /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
+		2BF2F4EC2C05E0F000574CED /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		2BF2F4EE2C05EE3700574CED /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				2BF2F4C72C048F4B00574CED /* ViewModels */,
 				2BF2F4C62C048F3E00574CED /* Views */,
 				2BF2F4B42C048AC600574CED /* Preview Content */,
+				2BF2F4EE2C05EE3700574CED /* Extensions.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -122,14 +125,14 @@
 			isa = PBXGroup;
 			children = (
 				2BF2F4B02C048AC600574CED /* HomeView.swift */,
-				2BF2F4CA2C04908D00574CED /* ProfileView.swift */,
 				2BF2F4CC2C0490A200574CED /* TaskView.swift */,
+				2BF2F4D42C04912400574CED /* TaskListView.swift */,
+				2BF2F4CA2C04908D00574CED /* ProfileView.swift */,
 				2BF2F4CE2C0490DA00574CED /* NewTaskView.swift */,
 				2BF2F4D02C0490ED00574CED /* LoginView.swift */,
 				2BF2F4D22C0490F900574CED /* RegisterView.swift */,
-				2BF2F4D42C04912400574CED /* TaskListView.swift */,
 				2BF2F4E82C04991F00574CED /* HeaderView.swift */,
-				2BF2F4EC2C05E0F000574CED /* AuthButton.swift */,
+				2BF2F4EC2C05E0F000574CED /* CustomButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,12 +141,12 @@
 			isa = PBXGroup;
 			children = (
 				2BF2F4DA2C04919500574CED /* HomeViewModel.swift */,
-				2BF2F4DC2C04919F00574CED /* ProfileViewModel.swift */,
 				2BF2F4DE2C0491AF00574CED /* TaskViewModel.swift */,
+				2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */,
+				2BF2F4DC2C04919F00574CED /* ProfileViewModel.swift */,
 				2BF2F4E02C0491BC00574CED /* NewTaskViewModel.swift */,
 				2BF2F4E22C0491CA00574CED /* LoginViewModel.swift */,
 				2BF2F4E42C0491D400574CED /* RegisterViewModel.swift */,
-				2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -253,7 +256,7 @@
 				2BF2F4E52C0491D400574CED /* RegisterViewModel.swift in Sources */,
 				2BF2F4B12C048AC600574CED /* HomeView.swift in Sources */,
 				2BF2F4D92C04916900574CED /* TaskModel.swift in Sources */,
-				2BF2F4ED2C05E0F000574CED /* AuthButton.swift in Sources */,
+				2BF2F4ED2C05E0F000574CED /* CustomButton.swift in Sources */,
 				2BF2F4CF2C0490DA00574CED /* NewTaskView.swift in Sources */,
 				2BF2F4D32C0490F900574CED /* RegisterView.swift in Sources */,
 				2BF2F4DF2C0491AF00574CED /* TaskViewModel.swift in Sources */,
@@ -261,6 +264,7 @@
 				2BF2F4DD2C04919F00574CED /* ProfileViewModel.swift in Sources */,
 				2BF2F4E92C04991F00574CED /* HeaderView.swift in Sources */,
 				2BF2F4CB2C04908D00574CED /* ProfileView.swift in Sources */,
+				2BF2F4EF2C05EE3700574CED /* Extensions.swift in Sources */,
 				2BF2F4AF2C048AC600574CED /* ToDoListApp.swift in Sources */,
 				2BF2F4CD2C0490A200574CED /* TaskView.swift in Sources */,
 				2BF2F4D72C04916100574CED /* UserModel.swift in Sources */,

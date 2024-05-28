@@ -9,39 +9,35 @@ import SwiftUI
 
 struct RegisterView: View {
     
-    @State var name = ""
-    @State var username = ""
-    @State var email = ""
-    @State var password = ""
-    
+    @StateObject var viewModel = RegisterViewModel()
     
     var body: some View {
         NavigationStack {
             VStack {
-                HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .purple)
+                HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green.opacity(0.5))
                     .offset(y: 21)
                 Form {
-                    TextField("Name...", text: $name)
+                    TextField("Name...", text: $viewModel.name)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     
-                    TextField("Username...", text: $username)
+                    TextField("Username...", text: $viewModel.username)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     
-                    TextField("Email...", text: $email)
+                    TextField("Email...", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                         .autocorrectionDisabled()
                     
-                    SecureField("Password...", text: $password)
+                    SecureField("Password...", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                     
-                    AuthButton(title: "Sign Up", background: .purple) {
-                        
+                    CustomButton(title: "Sign Up", background: .green.opacity(0.5)) {
+                        viewModel.register()
                     }
                     .padding(4)
                 }

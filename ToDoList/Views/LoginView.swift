@@ -17,6 +17,11 @@ struct LoginView: View {
                 HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green)
                     .offset(y: 21)
                 Form {
+                    if !viewModel.errorMessage.isEmpty {
+                        Text(viewModel.errorMessage)
+                            .foregroundStyle(Color.red)
+                    }
+
                     TextField("Email...", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
@@ -26,8 +31,8 @@ struct LoginView: View {
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                     
-                    AuthButton(title: "Log In", background: .green) {
-                        
+                    CustomButton(title: "Log In", background: .green) {
+                        viewModel.login()
                     }
                     .padding(4)
                 }

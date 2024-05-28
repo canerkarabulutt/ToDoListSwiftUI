@@ -8,11 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @StateObject var viewModel = HomeViewModel()
+    
     var body: some View {
-        NavigationView {
+        if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
+            accountView
+        } else {
             LoginView()
         }
-        .padding()
+    }
+    @ViewBuilder
+    var accountView: some View {
+        TabView {
+            TaskListView(userId: viewModel.currentUserId)
+            .tabItem {
+                Label("Home", systemImage: "house")
+            }
+            ProfileView()
+            .tabItem {
+                Label("Profile", systemImage: "person.circle")
+            }
+        }
+        .accentColor(.green)
     }
 }
 
