@@ -31,6 +31,7 @@
 		2BF2F4E52C0491D400574CED /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E42C0491D400574CED /* RegisterViewModel.swift */; };
 		2BF2F4E72C0491E300574CED /* TaskListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */; };
 		2BF2F4E92C04991F00574CED /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4E82C04991F00574CED /* HeaderView.swift */; };
+		2BF2F4ED2C05E0F000574CED /* AuthButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4EC2C05E0F000574CED /* AuthButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		2BF2F4E42C0491D400574CED /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListViewModel.swift; sourceTree = "<group>"; };
 		2BF2F4E82C04991F00574CED /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		2BF2F4EC2C05E0F000574CED /* AuthButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				2BF2F4D22C0490F900574CED /* RegisterView.swift */,
 				2BF2F4D42C04912400574CED /* TaskListView.swift */,
 				2BF2F4E82C04991F00574CED /* HeaderView.swift */,
+				2BF2F4EC2C05E0F000574CED /* AuthButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				2BF2F4E52C0491D400574CED /* RegisterViewModel.swift in Sources */,
 				2BF2F4B12C048AC600574CED /* HomeView.swift in Sources */,
 				2BF2F4D92C04916900574CED /* TaskModel.swift in Sources */,
+				2BF2F4ED2C05E0F000574CED /* AuthButton.swift in Sources */,
 				2BF2F4CF2C0490DA00574CED /* NewTaskView.swift in Sources */,
 				2BF2F4D32C0490F900574CED /* RegisterView.swift in Sources */,
 				2BF2F4DF2C0491AF00574CED /* TaskViewModel.swift in Sources */,

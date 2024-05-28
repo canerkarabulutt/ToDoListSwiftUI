@@ -9,35 +9,29 @@ import SwiftUI
 
 struct LoginView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @StateObject var viewModel = LoginViewModel()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
-                HeaderView()
-                    .offset(y: -50)
+                HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green)
+                    .offset(y: 21)
                 Form {
-                    TextField("Email...", text: $email)
+                    TextField("Email...", text: $viewModel.email)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .textInputAutocapitalization(.never)
+                        .autocorrectionDisabled()
                     
-                    SecureField("Password...", text: $password)
+                    SecureField("Password...", text: $viewModel.password)
                         .textFieldStyle(DefaultTextFieldStyle())
+                        .textInputAutocapitalization(.never)
                     
-                    Button {
+                    AuthButton(title: "Log In", background: .green) {
                         
-                    } label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.green.opacity(1.0))
-                            Text("Log In")
-                                .foregroundStyle(.white)
-                                .bold()
-                        }
                     }
-                    .padding(2)
+                    .padding(4)
                 }
-                .offset(y: -100)
+                .offset(y: 35)
                 VStack {
                     Text("Log in to manage your tasks")
                     HStack {
@@ -52,10 +46,11 @@ struct LoginView: View {
                     NavigationLink("Click to Become a Member", destination: RegisterView())
                         .foregroundStyle(.green)
                 }
-                .padding(.bottom, 24)
+                .padding(.bottom, 60)
                 
                 Spacer()
             }
+            .navigationBarBackButtonHidden(true)
         }
     }
 }
