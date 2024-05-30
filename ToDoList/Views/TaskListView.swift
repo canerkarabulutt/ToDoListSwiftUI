@@ -24,12 +24,15 @@ struct TaskListView: View {
             .navigationTitle("To Do List")
             .toolbar {
                 Button {
-                    
+                    viewModel.showingNewTaskView = true
                 } label: {
                     Image(systemName: "plus")
                         .foregroundStyle(.green)
                 }
             }
+            .sheet(isPresented: $viewModel.showingNewTaskView, content: {
+                NewTaskView(newItemPresented: $viewModel.showingNewTaskView)
+            })
         }
     }
 }

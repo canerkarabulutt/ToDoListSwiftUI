@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+struct TaskModel: Codable, Identifiable {
+    let id: String
+    let title: String
+    let dueDate: TimeInterval
+    let addedDate: TimeInterval
+    var isDone: Bool
+    
+    mutating func setDone(_ state: Bool) {
+        isDone = state
+    }
+}
