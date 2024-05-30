@@ -8,18 +8,29 @@
 import SwiftUI
 
 struct TaskView: View {
+    
+    @StateObject var viewModel = ProfileViewModel()
+    
+    let task: TaskModel
+    
     var body: some View {
         NavigationStack {
-            VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(task.title)
+                        .font(.body)
+                        .italic()
+                        .bold()
+                    Text("\(Date(timeIntervalSince1970: task.dueDate).formatted(date: .abbreviated, time: .shortened))")
+                        .font(.footnote)
+                        .foregroundStyle(Color(.secondaryLabel))
+                }
+                Spacer()
                 
-            }
-            .navigationTitle("To Do List")
-            .toolbar {
                 Button {
-                    
+                    viewModel.toggleIsDone(task: task)
                 } label: {
-                    Image(systemName: "plus")
-                        .foregroundStyle(.green)
+                    Image(systemName: task.isDone ? "checkmark.circle.fill" : "circle")
                 }
             }
         }
@@ -27,5 +38,5 @@ struct TaskView: View {
 }
 
 #Preview {
-    TaskView()
+    TaskView(task: .init(id: "123", title: "Get Food", dueDate: Date().timeIntervalSince1970, addedDate: Date().timeIntervalSince1970, isDone: true))
 }
