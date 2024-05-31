@@ -15,7 +15,7 @@ struct LoginView: View {
         NavigationStack {
             VStack {
                 HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green)
-                    .offset(y: 21)
+                    .offset(y: -45)
                 Form {
                     if !viewModel.errorMessage.isEmpty {
                         Text(viewModel.errorMessage)
@@ -36,7 +36,7 @@ struct LoginView: View {
                     }
                     .padding(4)
                 }
-                .offset(y: 35)
+                .offset(y: -60)
                 VStack {
                     Text("Log in to manage your tasks")
                     HStack {

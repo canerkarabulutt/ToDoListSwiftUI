@@ -9,12 +9,11 @@ import SwiftUI
 
 struct TaskView: View {
     
-    @StateObject var viewModel = ProfileViewModel()
+    @StateObject var viewModel = TaskViewModel()
     
     let task: TaskModel
     
     var body: some View {
-        NavigationStack {
             HStack {
                 VStack(alignment: .leading) {
                     Text(task.title)
@@ -24,6 +23,7 @@ struct TaskView: View {
                     Text("\(Date(timeIntervalSince1970: task.dueDate).formatted(date: .abbreviated, time: .shortened))")
                         .font(.footnote)
                         .foregroundStyle(Color(.secondaryLabel))
+
                 }
                 Spacer()
                 
@@ -31,12 +31,22 @@ struct TaskView: View {
                     viewModel.toggleIsDone(task: task)
                 } label: {
                     Image(systemName: task.isDone ? "checkmark.circle.fill" : "circle")
+                        .foregroundStyle(Color.green)
                 }
             }
+        NavigationLink("Click to show more details...", destination: TaskDetailView(task: TaskDetailModel(
+            id: task.id,
+            title: task.title,
+            context: task.context,
+            dueDate: task.dueDate,
+            addedDate: task.addedDate)))
+        .font(.footnote)
+        .foregroundStyle(.green)
+        .bold()
         }
     }
-}
+
 
 #Preview {
-    TaskView(task: .init(id: "123", title: "Get Food", dueDate: Date().timeIntervalSince1970, addedDate: Date().timeIntervalSince1970, isDone: true))
+    TaskView(task: .init(id: "123", title: "Get Food", context: "Banana, apple, peach...", dueDate: Date().timeIntervalSince1970, addedDate: Date().timeIntervalSince1970, isDone: true))
 }

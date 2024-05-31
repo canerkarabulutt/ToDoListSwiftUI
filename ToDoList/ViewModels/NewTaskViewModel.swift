@@ -24,7 +24,7 @@ class NewTaskViewModel: ObservableObject {
         
         let newID = UUID().uuidString
         
-        let newTask = TaskModel(id: newID, title: title, dueDate: dueDate.timeIntervalSince1970, addedDate: Date().timeIntervalSince1970, isDone: false)
+        let newTask = TaskModel(id: newID, title: title, context: "", dueDate: dueDate.timeIntervalSince1970, addedDate: Date().timeIntervalSince1970, isDone: false)
         
         let db = Firestore.firestore()
         db.collection("users").document(uid).collection("tasks").document(newID).setData(newTask.asDictionary())

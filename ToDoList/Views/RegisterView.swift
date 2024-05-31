@@ -14,8 +14,8 @@ struct RegisterView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green.opacity(0.5))
-                    .offset(y: 21)
+                HeaderView(title: "To Do List", subtitle: "Manage your task easily!", angle: 30, background: .green.opacity(0.7))
+                    .offset(y: -55)
                 Form {
                     TextField("Name...", text: $viewModel.name)
                         .textFieldStyle(DefaultTextFieldStyle())
@@ -36,19 +36,21 @@ struct RegisterView: View {
                         .textFieldStyle(DefaultTextFieldStyle())
                         .textInputAutocapitalization(.never)
                     
-                    CustomButton(title: "Sign Up", background: .green.opacity(0.5)) {
+                    CustomButton(title: "Sign Up", background: .green.opacity(0.7)) {
                         viewModel.register()
                     }
                     .padding(4)
                 }
-                .offset(y: 35)
+                .offset(y: -80)
                 VStack {
                     Text("If you are a member,")
+                        .offset(y: -30)
 
                     NavigationLink("Click here to return to login page", destination: LoginView())
-                        .foregroundStyle(.purple)
+                        .foregroundStyle(.green)
+                        .offset(y: -30)
                 }
-                .padding(.bottom, 55)
+                .padding(.bottom, 30)
                 Spacer()
             }
             .navigationBarBackButtonHidden(true)

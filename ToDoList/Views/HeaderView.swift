@@ -49,7 +49,8 @@ struct HeaderView: View {
                     .shadow(color: .black.opacity(0.6), radius: 2, x: 0, y: 2)
             }
         }
-        .frame(width: UIScreen.main.bounds.width*2, height: UIScreen.main.bounds.width/1.5)
+        .frame(width: UIScreen.main.bounds.width*2, height: UIScreen.main.bounds.width)
+        .offset(y: -10)
     }
 }
 
