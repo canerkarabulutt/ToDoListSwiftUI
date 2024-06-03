@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 class TaskListViewModel: ObservableObject {
     
+    @Published var tasks: [TaskModel] = []
     @Published var showingNewTaskView = false
     
     private let userId: String

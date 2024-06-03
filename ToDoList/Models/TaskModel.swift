@@ -10,7 +10,7 @@ import Foundation
 struct TaskModel: Codable, Identifiable {
     let id: String
     let title: String
-    let context: String
+    var context: String
     let dueDate: TimeInterval
     let addedDate: TimeInterval
     var isDone: Bool

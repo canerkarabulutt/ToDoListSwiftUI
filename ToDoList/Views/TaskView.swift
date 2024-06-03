@@ -34,12 +34,14 @@ struct TaskView: View {
                         .foregroundStyle(Color.green)
                 }
             }
-        NavigationLink("Click to show more details...", destination: TaskDetailView(task: TaskDetailModel(
+        NavigationLink("Click to show more details...", destination: TaskDetailView(task: TaskModel(
             id: task.id,
             title: task.title,
             context: task.context,
             dueDate: task.dueDate,
-            addedDate: task.addedDate)))
+            addedDate: task.addedDate, 
+            isDone: false
+        )))
         .font(.footnote)
         .foregroundStyle(.green)
         .bold()

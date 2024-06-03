@@ -29,6 +29,10 @@ struct HomeView: View {
             .tabItem {
                 Label("Profile", systemImage: "person.circle")
             }
+            ProfileView()
+            .tabItem {
+                Label("Past Tasks", systemImage: "clock.badge.checkmark")
+            }
         }
         .accentColor(.green)
     }
@@ -37,3 +41,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+

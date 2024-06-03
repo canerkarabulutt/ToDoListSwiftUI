@@ -12,12 +12,12 @@ struct TaskListView: View {
     
     @StateObject var viewModel: TaskListViewModel
     @FirestoreQuery var tasks: [TaskModel]
-    
-    
+        
     init(userId: String) {
         self._tasks = FirestoreQuery(collectionPath: "users/\(userId)/tasks")
         
         self._viewModel = StateObject(wrappedValue: TaskListViewModel(userId: userId))
+        
     }
     
     var body: some View {

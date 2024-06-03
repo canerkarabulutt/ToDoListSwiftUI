@@ -23,4 +23,13 @@ class TaskViewModel: ObservableObject {
         
         db.collection("users").document(uid).collection("tasks").document(taskCopy.id).setData(taskCopy.asDictionary())
     }
+    
+    func updateTask(task: TaskModel) {
+        guard let uid = Auth.auth().currentUser?.uid else { return }
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users").document(uid).collection("tasks").document(task.id).setData(task.asDictionary())
+        
+    }
 }
