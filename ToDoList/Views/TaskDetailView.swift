@@ -26,14 +26,12 @@ struct TaskDetailView: View {
                     self.input = task.context
                 }
                 .frame(width: UIScreen.main.bounds.width/4 ,height: UIScreen.main.bounds.width/8)
-              //  .offset(y: -20)
                 CustomButton(title: "Save", background: .red) {
                     task.context = input
                     viewModel.updateTask(task: task)
                     isEditing.toggle()
                 }
                 .frame(width: UIScreen.main.bounds.width/4 ,height: UIScreen.main.bounds.width/8)
-               // .offset(y: -20)
             }
             Spacer()
         }

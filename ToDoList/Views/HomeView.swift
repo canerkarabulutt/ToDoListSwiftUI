@@ -29,7 +29,7 @@ struct HomeView: View {
             .tabItem {
                 Label("Profile", systemImage: "person.circle")
             }
-            ProfileView()
+            PastTaskListView(userId: viewModel.currentUserId)
             .tabItem {
                 Label("Past Tasks", systemImage: "clock.badge.checkmark")
             }

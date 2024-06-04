@@ -22,6 +22,15 @@ class TaskListViewModel: ObservableObject {
     func delete(id: String) {
         let db = Firestore.firestore()
         
-        db.collection("users").document(userId).collection("tasks").document(id).delete()
+        let deletedTaskRef = db.collection("users").document(userId).collection("tasks").document(id)
+        
+        deletedTaskRef.getDocument { document, error in
+            if let document = document, document.exists {
+                let data = document.data() ?? [:]
+                db.collection("users").document(self.userId).collection("deleted_tasks").addDocument(data: data)
+                deletedTaskRef.delete()
+            }
+        }
     }
+
 }

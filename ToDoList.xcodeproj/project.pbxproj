@@ -36,6 +36,10 @@
 		2BF2F4F12C089ED100574CED /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BF2F4F02C089ED100574CED /* Launch Screen.storyboard */; };
 		2BF2F4F32C08B2F400574CED /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4F22C08B2F400574CED /* TaskDetailView.swift */; };
 		2BF2F4F92C0DDD8900574CED /* DetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4F82C0DDD8900574CED /* DetailHeaderView.swift */; };
+		2BF2F4FD2C0DF8DD00574CED /* PastTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4FC2C0DF8DD00574CED /* PastTaskView.swift */; };
+		2BF2F4FF2C0DFBB400574CED /* PastTaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F4FE2C0DFBB400574CED /* PastTaskListView.swift */; };
+		2BF2F5012C0DFDE000574CED /* PastTaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F5002C0DFDE000574CED /* PastTaskDetailView.swift */; };
+		2BF2F5032C0E020800574CED /* PastTaskViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BF2F5022C0E020800574CED /* PastTaskViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +70,10 @@
 		2BF2F4F02C089ED100574CED /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		2BF2F4F22C08B2F400574CED /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 		2BF2F4F82C0DDD8900574CED /* DetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHeaderView.swift; sourceTree = "<group>"; };
+		2BF2F4FC2C0DF8DD00574CED /* PastTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTaskView.swift; sourceTree = "<group>"; };
+		2BF2F4FE2C0DFBB400574CED /* PastTaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTaskListView.swift; sourceTree = "<group>"; };
+		2BF2F5002C0DFDE000574CED /* PastTaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTaskDetailView.swift; sourceTree = "<group>"; };
+		2BF2F5022C0E020800574CED /* PastTaskViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTaskViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,9 @@
 				2BF2F4CC2C0490A200574CED /* TaskView.swift */,
 				2BF2F4D42C04912400574CED /* TaskListView.swift */,
 				2BF2F4F22C08B2F400574CED /* TaskDetailView.swift */,
+				2BF2F4FC2C0DF8DD00574CED /* PastTaskView.swift */,
+				2BF2F4FE2C0DFBB400574CED /* PastTaskListView.swift */,
+				2BF2F5002C0DFDE000574CED /* PastTaskDetailView.swift */,
 				2BF2F4CA2C04908D00574CED /* ProfileView.swift */,
 				2BF2F4CE2C0490DA00574CED /* NewTaskView.swift */,
 				2BF2F4D02C0490ED00574CED /* LoginView.swift */,
@@ -151,6 +162,7 @@
 				2BF2F4DA2C04919500574CED /* HomeViewModel.swift */,
 				2BF2F4DE2C0491AF00574CED /* TaskViewModel.swift */,
 				2BF2F4E62C0491E300574CED /* TaskListViewModel.swift */,
+				2BF2F5022C0E020800574CED /* PastTaskViewModel.swift */,
 				2BF2F4DC2C04919F00574CED /* ProfileViewModel.swift */,
 				2BF2F4E02C0491BC00574CED /* NewTaskViewModel.swift */,
 				2BF2F4E22C0491CA00574CED /* LoginViewModel.swift */,
@@ -274,9 +286,13 @@
 				2BF2F4F92C0DDD8900574CED /* DetailHeaderView.swift in Sources */,
 				2BF2F4DD2C04919F00574CED /* ProfileViewModel.swift in Sources */,
 				2BF2F4E92C04991F00574CED /* HeaderView.swift in Sources */,
+				2BF2F5012C0DFDE000574CED /* PastTaskDetailView.swift in Sources */,
 				2BF2F4F32C08B2F400574CED /* TaskDetailView.swift in Sources */,
+				2BF2F5032C0E020800574CED /* PastTaskViewModel.swift in Sources */,
 				2BF2F4CB2C04908D00574CED /* ProfileView.swift in Sources */,
+				2BF2F4FD2C0DF8DD00574CED /* PastTaskView.swift in Sources */,
 				2BF2F4EF2C05EE3700574CED /* Extensions.swift in Sources */,
+				2BF2F4FF2C0DFBB400574CED /* PastTaskListView.swift in Sources */,
 				2BF2F4AF2C048AC600574CED /* ToDoListApp.swift in Sources */,
 				2BF2F4CD2C0490A200574CED /* TaskView.swift in Sources */,
 				2BF2F4D72C04916100574CED /* UserModel.swift in Sources */,
